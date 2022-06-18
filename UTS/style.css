@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+	font-family: 'Poppins', sans-serif;
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	transition: all .2s linear;
+}
+
+body{
+	background: linear-gradient(to right, #f7cac9, #b4c8ea);
+}
+
+html::-webkit-scrollbar{
+	width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+	background: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb{
+	background: #f7cac9;
+	border-radius: 50px;
+}
+
+.title{
+	font-size: 25px;
+	color: hotpink;
+	margin-bottom: 10px;
+}
+
+.container{
+	 padding: 100px 14%;
+	 display: flex;
+}
+
+.profile{
+	background: white;
+	flex: 1 1 425px;
+	padding: 20px; 
+	text-align: center;
+	position: sticky;
+	top: 20px;
+	left: 0;
+	border-radius: 3%;
+	border-right: 3px solid #f7cac9;
+	align-self: flex-start;
+}
+
+.profile img{
+	height: 170px;
+	width: 170px;
+	border-radius: 50%;
+	border: 5px solid #f7cac9;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.profile h3{
+	color: #91a8d0;
+	font-size: 19px;
+	border-bottom: 2px solid #f7cac9;
+}
+
+.contact{
+	text-align: left;
+	color: hotpink;
+	font-size: 15px;
+}
+
+.contact ul{
+	position: relative;
+}
+
+.contact ul li{
+	position: relative;
+	list-style: none;
+	margin: 2px 0;
+	cursor: pointer;
+}
+
+.contact ul li .icon{
+	display: inline-block;
+	color: #91a8d0;
+	width: 30px;
+}
+
+.contact ul li .text{
+	color: #777;
+	font: caption;
+	font-size: 16px;
+}
+
+.info{
+	background: white;
+	padding: 20px 30px;
+	border-radius: 1%;
+	flex: 1 1 1000px;
+}
+
+.info .about p{
+	font-size: 16px;
+	line-height: 1.2;
+	padding-bottom: 10px;
+	color: #777;
+	text-align: justify;
+}
+
+.info .aboutme{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.education{
+	margin-top: 8px;
+}
+
+.education ul li{
+	list-style: none;
+}
+
+.content{
+	display: flex;
+}
+
+.content .year{
+	width: 120px;
+	color: #777;
+}
+
+.content .data{
+	width: calc(100% - 125px);
+	padding-left: 20px;
+	position: relative;
+}
+
+.content .data-title{
+	text-transform: uppercase;
+	font-weight: 680;
+	font-size: 17px;
+	letter-spacing: 1px;
+	color: #91a8d0;
+}
+
+.content .data-content{
+	font-weight: 400;
+	font-size: 14.5px;
+	margin-top: 3px;
+	color: #777;
+}
+
+.content .data:before{
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #91a8d0;
+}
+
+.content .data:after{
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 4px;
+	width: 2px;
+	height: 100%;
+	background: #91a8d0;
+}
+
+.org-exp{
+	margin-top: 8px;
+}
+
+.org-exp ul li{
+	list-style: none;
+}
+
+.skills{
+	margin-top: 8px;
+}
+
+.skills .box{
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	align-items: center;
+	justify-content: center;
+}
+
+.skills .box h4{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #777;
+}
+
+.skills .box .percent{
+	position: relative;
+	width: 100%;
+	height: 40%;
+	background: lightgrey;
+}
+
+.skills .percent div{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #b4c8ea;
+}
+
+.hobbies{
+	margin-top: 8px;
+}
+
+.hobbies ul{
+	display: grid;
+	grid-template-columns: repeat(3, 2fr);
+	color: #777;
+}
+
+.hobbies ul li{
+	list-style: none;
+}
+
+.hobbies ul li i{
+	color: #91a8d0;
+}
+
+.gallery{
+	margin-top: 8px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.gallery img{
+	width: 150px;
+	border-radius: 5%;
+	padding: 2px;
+}
+
+/*Tablet*/
+
+@media only screen and (max-width:1024px){
+
+.container{
+	flex-flow: column;
+	padding: 15px;
+	justify-content: center;
+}
+
+.profile{
+	flex: none;
+	position: static;
+	border-radius: 5px;
+	border-right: none;
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.info{
+	border-radius: 5px;
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+	padding: 20px;
+}
+
+.info .hobbies ul{
+	display: grid;
+	grid-template-columns: repeat(2, 3fr);
+}
+
+.gallery img{
+	width: 120px;
+}
+
+/*Smartphone*/
+
+@media only screen and (max-width:420px);
+
+.profile{
+	width: 100%;
+}
+
+.profile .contact h5{
+	font-size: 20px;
+}
+
+.info .about p{
+	font-size: 15px;
+}
+
+.info .education .box-container .box p{
+	font-size: 15px;
+}
+
+.info .org-exp .box-container .box p{
+	font-size: 15px;
+}
+
+.gallery img{
+	width: 100px;
+}

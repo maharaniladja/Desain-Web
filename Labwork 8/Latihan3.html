@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <title>jQuery</title>
+</head>
+
+<body>
+  <center>
+    <h1 id=jam>Penghitung Karakter</h1>
+    <br>
+    <textarea name="ulasan" id="ulasan" rows="4" cols="60" onkeyup="countChar(this)"></textarea>
+    <br>
+    <h3>Jumlah Huruf : <span id="hitung">0</span></h3>
+    <div id="bar"></div>
+  </center>
+
+  <script>
+    function countChar(val) {
+      var len = val.value.length;
+      if (len >= 51) {
+        val.value = val.value.substring(0, 50);
+      }
+      else {
+        $("#hitung").text(0 + len);
+        $ ("#bar").progressbar({
+          value: ((0 + len)*2)
+        });
+      }
+    };
+  </script>
+
+  </body>
+  </html>
